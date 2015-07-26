@@ -11,7 +11,7 @@ module ProofOfConceptHuginnAgents
     end
 
     def validate_options
-      errors.add(:base, 'i have to be sad') unless options['sad_state'].present?
+      errors.add(:base, 'i have to be sad') unless options['sad_state'].to_s.include? 'sad'
     end
   end
 end
